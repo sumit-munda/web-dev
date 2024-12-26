@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
+
+      <a href="https://iconscout.com/icons/url" class="text-underline font-size-sm" target="_blank">Url</a> by <a href="https://iconscout.com/contributors/gariebaldy" class="text-underline font-size-sm" target="_blank">Gariebaldy</a>
+
       <h1><span>TINY</span>U<span>RL</span>..</h1>
       <form id="shorten-form">
         <div>
@@ -33,12 +37,14 @@
           console.log("links", links);
 
           const list = document.getElementById("shortened-urls");
-          list.innerHTML = '';
+          list.innerHTML = "";
 
-          for(const [shortCode, url] of Object.entries(links)) {
-              const li = document.createElement('li');
-              li.innerHTML = `<a href="/${shortCode}" target="_blank">${window.location.origin}/${shortCode}</a> -> ${url}`
-              list.appendChild(li);
+          for (const [shortCode, url] of Object.entries(links)) {
+            const li = document.createElement("li");
+            const truncatedURL =
+              url.length >= 30 ? `${url.slice(0, 30)}...` : url;
+            li.innerHTML = `<a href="/${shortCode}" target="_blank">${window.location.origin}/${shortCode}</a> -> ${truncatedURL}`;
+            list.appendChild(li);
           }
         } catch (error) {
           console.error(error);
@@ -76,7 +82,5 @@
           }
         });
     </script>
-
-    <!-- <script src="script.js"></script> -->
   </body>
 </html>

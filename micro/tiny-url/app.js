@@ -2,6 +2,7 @@ const fs = require("fs/promises");
 const http = require("http");
 const path = require("path");
 const crypto = require("crypto");
+const { log } = require("console");
 
 const PORT = 7000;
 const DATA_FILE = path.join("data", "links.json");
@@ -49,6 +50,16 @@ const server = http.createServer(async (req, res) => {
       const links = await loadLinks();
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify(links));
+    } else {
+      const links = await loadLinks();
+      const shortCode = req.url.slice(1);
+      console.log("redirecting...", req.url);
+      if (links[shortCode]) {
+        res.writeHead(302, { location: links[shortCode] });
+        return res.end();
+      }
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      return res.end("Shortened URL not found...");
     }
   }
 

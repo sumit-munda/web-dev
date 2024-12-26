@@ -1,10 +1,5 @@
 {
-  "local": "http://localhost:7000/",
-  "loc": "http://localhost:7000/",
-  "lo": "http://localhost:7000/",
-  "l": "http://localhost:7000/",
-  "ggl": "https://google.com",
-  "gg": "https://google.com",
-  "g": "https://google.com",
-  "glg": "https://google.com"
+  "ggl": "https://www.google.com",
+  "yt": " https://www.youtube.com",
+  "favicon": "https://iconscout.com/icons/url-shortener-technology?price=free"
 }
