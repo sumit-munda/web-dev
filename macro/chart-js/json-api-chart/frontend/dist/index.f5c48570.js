@@ -613,7 +613,7 @@ const fetchData = async ()=>{
     const data = await fetchApi();
     console.log(data);
     if (Array.isArray(data) && data.length > 0) new (0, _auto.Chart)(document.getElementById("canvas"), {
-        type: "line",
+        type: "bar",
         data: {
             labels: data.map((cur)=>cur.year),
             datasets: [

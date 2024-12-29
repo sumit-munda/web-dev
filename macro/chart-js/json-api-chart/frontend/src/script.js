@@ -18,7 +18,7 @@ const fetchData = async () => {
   console.log(data);
   if (Array.isArray(data) && data.length > 0) {
     new Chart(document.getElementById("canvas"), {
-      type: "line",
+      type: "bar",
       data: {
         labels: data.map((cur) => cur.year),
         datasets: [
