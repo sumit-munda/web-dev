@@ -1,0 +1,13 @@
+{
+  "name": "tiny-url",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
