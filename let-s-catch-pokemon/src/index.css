@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pokemon", "fira code", "Urbanist", sans-serif;
+  font-family: "fira code", "Urbanist", sans-serif;
 }
 
 html {
@@ -10,7 +10,7 @@ html {
 }
 
 title {
-  font-family: "Pokemon", "fira code", "Urbanist", sans-serif;
+  font-family: "fira code", "Urbanist", sans-serif;
 }
 
 body {
