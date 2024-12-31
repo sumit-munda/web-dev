@@ -35,7 +35,6 @@ const Pokemon = () => {
     }
   };
 
- 
   // useEffect to fetch the list of Pokémon when the component mounts
   useEffect(() => {
     fetchPokemon();
