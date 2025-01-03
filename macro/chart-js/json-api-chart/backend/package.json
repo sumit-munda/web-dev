@@ -2,10 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "e-server.js",
-  "type": "module",
+  
   "scripts": {
-    "start": "node --watch e-server.js",
-    "dev": "nodemon e-server.js"
+    "start": "bun run e-server.js",
+    "dev": "bun --watch e-server.js"
+
   },
   "keywords": [],
   "author": "",

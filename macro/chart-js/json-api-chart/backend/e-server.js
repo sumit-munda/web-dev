@@ -7,8 +7,12 @@ import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+// thapa technical...
+const __filename = import.meta.url.pathname;
+const __dirname = import.meta.dirname;
 
 const corsOptions = {
   origin: "http://localhost:1234",
