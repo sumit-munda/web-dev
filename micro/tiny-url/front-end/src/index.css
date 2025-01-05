@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base rule  */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-snap-type: Y proximity;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	font-size: 1.4rem;
+}
+
+.container {
+	max-width: 128rem;
+	margin: 0 auto;
+	padding: 2.4rem;
+}
+
+.section-header {
+	@apply grid grid-cols-3 gap-4 justify-stretch;
+}
+
+.logo {
+	@apply cursor-pointer;
+}
+
+.navbar {
+	@apply flex justify-center items-center;
+	& ul {
+		@apply flex justify-center items-center gap-2;
+	}
+}
+
+.account {
+	@apply flex items-center justify-end;
+	& ul {
+		@apply grid grid-cols-3 gap-2;
+	}
+}
+
+.section-main {
+	height: 80vh;
+	@apply grid grid-cols-2;
+}
+
+.section-main .main-one {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.section-main .main-one p:nth-child(1) {
+	@apply bg-gray-300 text-white px-8 py-2 rounded-3xl;
+}
+
+.section-main .main-one .reviews {
+	@apply flex;
+	position: relative;
+	margin: 1rem 0;
+
+	& .rating {
+		position: absolute;
+		left: 300%;
+
+		& p {
+			margin: 0;
+		}
+	}
+}
+.section-main .main-one .reviews .images {
+	display: flex;
+	position: relative;
+}
+
+.section-main .main-one .reviews .images img {
+	background-color: white;
+	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
+	padding: 2px;
+	border: 2px solid black;
+}
+
+.section-main .main-one .reviews .images img:nth-child(1) {
+	left: 0;
+}
+
+.section-main .main-one .reviews .images img:nth-child(2) {
+	position: absolute;
+	left: 80%;
+}
+
+.section-main .main-one .reviews .images img:nth-child(3) {
+	position: absolute;
+	left: 160%;
+}
+
+.section-main .main-two {
+	border-left: 2px solid black;
+}
+
+.section-main .login-page {
+	margin: 3rem;
+	border: 2px solid black;
+	height: 90%;
+}
+
+.section-footer {
+	@apply grid grid-cols-2;
+}
+
+.section-footer .social-icons {
+	@apply flex items-center justify-end;
+}
+
+.section-footer .rights {
+	& ul {
+		@apply flex flex-row items-end gap-4;
+	}
+}
+.btn-b {
+	@apply border-2 border-black bg-black text-white py-2 px-10 rounded-md shadow-md hover:bg-white hover:text-black;
+}
+.btn-w {
+	@apply border-2 border-black py-2 px-10 rounded-md shadow-md hover:bg-black hover:text-white;
+}
+
+a {
+	font-weight: 500;
+	@apply px-4 py-2 rounded-md hover:border;
+}
+
+hr {
+	@apply h-1 bg-black;
+}
+
+h1 {
+	font-size: 5rem;
+	font-weight: bolder;
+	line-height: 1.2;
+}
+
+button {
+	font-weight: 500;
+}
+p {
+	@apply text-gray-500 mt-4 mb-4;
+}
+
+input {
+	margin: 1rem 1rem 1rem 0rem;
+	@apply w-96 border border-black px-4 py-2 rounded-md;
+	outline: none;
+
+	&::placeholder {
+		font-size: 1.2rem;
+		padding: 1rem 0;
+	}
+}
+
+.dashboard .section-header {
+	@apply grid grid-cols-[1fr_4fr];
+
+	& .dashboard-page {
+		@apply flex justify-between items-start;
+	}
+}
+
+.profile {
+	@apply flex gap-6;
+
+	& .logged-in {
+		@apply flex items-center gap-4;
+
+		& img {
+			@apply rounded-full border-2 border-black p-[.1rem];
+		}
+	}
+}
+
+.dashboard .section-main {
+	@apply grid grid-cols-[2fr_5fr_2fr];
+}
+
+.dashboard .section-main .main-one {
+	@apply flex flex-col items-start justify-between;
+}
+
+.dashboard .section-main .main-one li {
+	@apply flex hover:text-white hover:bg-black rounded-md;
+
+	& a {
+		font-weight: 500;
+		@apply border-black;
+	}
+
+	& i {
+		@apply p-4;
+	}
+}
+
+.dashboard .section-main .main-three {
+	@apply flex flex-col justify-around;
+}
+.dashboard .section-main .main-three .qr-box .head,
+.dashboard .section-main .main-three .qr-box .qr-details {
+	margin: 2rem 0;
+	@apply flex justify-around;
+}
+
+.dashboard .section-main .main-three .qr-box .qr-details .qr-code {
+	@apply w-14 h-14;
+}
+
+.chart {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	gap: 2vw;
+	flex-wrap: wrap;
+	background-color: #dddddd;
+}
+
+.dataCard {
+	background-color: #efefef;
+	border-radius: 0.5em;
+	box-shadow: rgba(149, 157, 167, 0.2) 0px 8px 24px;
+	padding: 1em;
+}
+
+.revenueCard {
+	width: 92%;
+	height: 30rem;
+}
+
+.customerCard {
+	width: 50%;
+	height: 30rem;
+}
+
+.categoryCard {
+	width: 40%;
+	height: 30rem;
+}
